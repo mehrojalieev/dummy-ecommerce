@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: .2s ease;
+}
+
+
+.container{
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
