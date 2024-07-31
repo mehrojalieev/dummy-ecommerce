@@ -1,7 +1,12 @@
+import { useDispatch } from "react-redux"
 import { ProductType } from "../../../types"
 import "./CardOfCart.scss"
+import { RemoveCart } from "../../../redux/actions/cart-action"
 const CardofCart = ({product}: {product: ProductType}) => {
-    console.log(product);
+    const dispatch = useDispatch()
+    const handleRemoveFromCart = () => {
+            dispatch(RemoveCart(product) as any)
+    }
     
   return (
     <div className="cardofcart">
@@ -21,7 +26,7 @@ const CardofCart = ({product}: {product: ProductType}) => {
         </div>
         <div className="card__main-action">
         <span className="price">${product.price}</span>
-            <span className="material-symbols-outlined delete-btn">delete</span>
+            <span onClick={handleRemoveFromCart} className="material-symbols-outlined delete-btn">delete</span>
         </div>
     </div>
   )

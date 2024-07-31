@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Card = ({product}: {product: ProductType}) => {
   const dispatch = useDispatch()
 
-  const CartProducts = useSelector((state: any) => state.cart.cart)
+  const CartProducts = useSelector((state: any) => state?.carts?.cart)
 
   console.log(CartProducts);
   
@@ -36,7 +36,7 @@ const Card = ({product}: {product: ProductType}) => {
        <i><FaStar/></i>
       </div>
       {
-        CartProducts.filter((f: ProductType) => f.id === product.id).length > 0 ? 
+        CartProducts?.filter((f: ProductType) => f?.id === product?.id).length > 0 ? 
         <div>
           <button onClick={handleRemoveFromCart} className='in-cart add-to-cart'>+ Remove From Cart</button>
         </div>

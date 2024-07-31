@@ -3,7 +3,7 @@ import CardofCart from "./card-of-cart/CardofCart";
 import { ProductType } from "../../types";
 import "./Cart.scss"
 const Cart = () => {
-    const CartData = useSelector((state: any) => state.cart.cart)
+    const CartData = useSelector((state: any) => state?.carts?.cart)
     console.log(CartData);
     
   return (
@@ -12,6 +12,9 @@ const Cart = () => {
             <h2>Cart</h2>
         </div>
 
+
+        {
+            CartData?.length > 0 ?
         <div className="cart__contents-wrapper">
             <div className="cart__cards-wrapper">
                 {
@@ -39,6 +42,13 @@ const Cart = () => {
                     <button className="checkout-btn">Checkout</button>
             </div>
         </div>
+    :
+        <div className="empty-cart">
+            <h3>Your cart is empty</h3>
+            <span className="material-symbols-outlined">shopping_cart</span>
+        </div>
+        }
+
     </div>
   )
 }

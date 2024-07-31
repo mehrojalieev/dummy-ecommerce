@@ -86,3 +86,22 @@
         cursor: pointer;
     }
 }
+
+.empty-cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 7rem;
+    column-gap: 1rem;
+    h3{
+        font-size: 45px;
+        font-weight: 500;
+        color: #6b6b6b;
+    }
+    span{
+        margin-top: 14px;
+        font-size: 44px;
+        color: #6b6b6b;
+    }
+}
