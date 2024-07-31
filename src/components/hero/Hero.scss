@@ -1,0 +1,83 @@
+.hero{
+    margin-top: 1rem;
+    border-radius: 6px;
+    background-position: left ;
+    width: 100%;
+}
+.banner-navbar{
+width: 100%;
+height: 80px;
+background-color: var(--dark-color);
+display: flex;
+align-items: center;
+justify-content: center;
+column-gap: 2rem;
+p{
+    color: var(--light-color);
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+}
+
+.hero-wrapper{
+    height: 500px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// .hero__content-wrapper{
+//     display: none;
+//     align-items: center;
+//     justify-content: space-between;
+//     position: absolute;
+//     top: 0%;
+//     left: 0%;
+//     padding: 0 3.7rem;
+//     width: 100%;
+//     height: 100%;	
+
+// }
+
+// .banner-content{
+//     .content-title{
+//         color: var(--light-color);
+//         font-size: 36px;
+//         line-height: 60px;
+//         font-weight: 500;
+//         max-width: 400px;
+//     }
+//     .offer-text{
+//         color: var(--light-color);
+//         font-weight: 700;
+//         font-size: 46px;
+//         margin-top: 1rem;
+//     }
+//     .shopping-btn{
+//         border: none;
+//         border-radius: 6px;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         column-gap: 10px;
+//         font-size: 15px;
+//         font-weight: 500;
+//         margin-top: 1.4rem;
+//         background-color: var(--light-color);
+//         padding: 14px 12px;
+//     }
+// }
+// .banner-image{
+//     max-width: 500px;
+//     height: 360px;
+//     img{
+//         width: 100%;
+//         height: 100%;
+//         object-fit: contain;
+//     }
+// }
