@@ -22,7 +22,7 @@ const SingleProduct = () => {
 
     const dispatch = useDispatch()
 
-    const CardProducts = useSelector((state: any) => state.cart.cart)
+    const CardProducts = useSelector((state: any) => state?.carts?.cart)
 
     useEffect(() => {
         async function fetchSingleProduct() {
@@ -101,7 +101,7 @@ const SingleProduct = () => {
                     <p className="description">{productDetail?.description}</p>
                     <div className="content-action">
                                 {
-                                    CardProducts.filter((f: ProductType) => f.id === productDetail?.id).length > 0 ? 
+                                    CardProducts?.filter((f: ProductType) => f.id === productDetail?.id).length > 0 ? 
                                     <div>
                                         <button onClick={handleRemoveFromCart} className='in-cart add-to-cart'>- Remove From Cart</button>
                                     </div>

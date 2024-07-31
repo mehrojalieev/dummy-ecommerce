@@ -1,12 +1,25 @@
 // src/store/index.ts
-import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import {thunk} from 'redux-thunk';
-import { cartReducer } from '../reducers/cart-reducer';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
+import { rootReducer } from '../reducers/combine';
 
-const rootReducer = combineReducers({
-    cart: cartReducer,
-});
+const persistConfig = {
+    key: 'root',
+    storage,
+  };
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+    
+  
+    const persistedReducer = persistReducer(persistConfig as any, rootReducer)
 
-export default store;
+    const store = createStore(
+        persistedReducer,
+        applyMiddleware(thunk)
+    )
+
+    const persistor  = persistStore(store)
+
+
+export  {store, persistor};
